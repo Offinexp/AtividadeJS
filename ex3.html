@@ -4,18 +4,26 @@
     <title>Exercício 3</title>
     <script>
         function changeBackgroundColor() {
-            const color = document.getElementById("colorSelect").value;
-            document.body.style.backgroundColor = color;
+            const radios = document.getElementsByName("color");
+            for (const radio of radios) {
+                if (radio.checked) {
+                    document.body.style.backgroundColor = radio.value;
+                    break;
+                }
+            }
         }
     </script>
 </head>
 <body>
-    <select id="colorSelect" onchange="changeBackgroundColor()">
-        <option value="">Selecione uma cor Prof</option>
-        <option value="red">Vermelho</option>
-        <option value="green">Verde</option>
-        <option value="blue">Azul</option>
-        <option value="yellow">Amarelo</option>
-    </select>
+    <form>
+        <input type="radio" id="red" name="color" value="red" onclick="changeBackgroundColor()">
+        <label for="red">Vermelho</label><br>
+        <input type="radio" id="green" name="color" value="green" onclick="changeBackgroundColor()">
+        <label for="green">Verde</label><br>
+        <input type="radio" id="blue" name="color" value="blue" onclick="changeBackgroundColor()">
+        <label for="blue">Azul</label><br>
+        <input type="radio" id="yellow" name="color" value="yellow" onclick="changeBackgroundColor()">
+        <label for="yellow">Amarelo</label>
+    </form>
 </body>
 </html>
