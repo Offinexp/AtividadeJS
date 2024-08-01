@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 6</title>
+    <script>
+        function changeFontColor(color) {
+            document.getElementById("myParagraph").style.color = color;
+        }
+
+        function changeBackgroundColor(color) {
+            document.getElementById("myParagraph").style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <p id="myParagraph">Este é um parágrafo de exemplo.</p>
+    <button onclick="changeFontColor('white')">Fonte Branca</button>
+    <button onclick="changeFontColor('black')">Fonte Preta</button>
+    <button onclick="changeBackgroundColor('white')">Fundo Branco</button>
+    <button onclick="changeBackgroundColor('black')">Fundo Preto</button>
+</body>
+</html>

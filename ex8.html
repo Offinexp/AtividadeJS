@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 8</title>
+    <script>
+        function changeTextCase(action) {
+            const paragraph = document.getElementById("myParagraph");
+            paragraph.style.textTransform = action;
+        }
+    </script>
+</head>
+<body>
+    <p id="myParagraph">Este é um parágrafo de exemplo.</p>
+    <button onclick="changeTextCase('uppercase')">Maiúsculas</button>
+    <button onclick="changeTextCase('lowercase')">Minúsculas</button>
+</body>
+</html>

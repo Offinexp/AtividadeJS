@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 4</title>
+    <script>
+        function toggleParagraph() {
+            const paragraph = document.getElementById("myParagraph");
+            if (paragraph.style.display === "none") {
+                paragraph.style.display = "block";
+            } else {
+                paragraph.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p id="myParagraph">Criando um paragrafo para o Prof.</p>
+    <button onclick="toggleParagraph()">Mostrar/Ocultar Parágrafo</button>
+</body>
+</html>

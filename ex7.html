@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 7</title>
+    <script>
+        function changeFontSize(action) {
+            const paragraph = document.getElementById("myParagraph");
+            const currentSize = window.getComputedStyle(paragraph, null).getPropertyValue('font-size');
+            const newSize = action === 'increase' ? (parseFloat(currentSize) + 2) + 'px' : (parseFloat(currentSize) - 2) + 'px';
+            paragraph.style.fontSize = newSize;
+        }
+    </script>
+</head>
+<body>
+    <p id="myParagraph">Este é um parágrafo de teste.</p>
+    <button onclick="changeFontSize('increase')">+</button>
+    <button onclick="changeFontSize('decrease')">-</button>
+</body>
+</html>

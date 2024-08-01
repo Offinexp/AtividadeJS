@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 5</title>
+    <script>
+        function enableButton() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const checkedCount = Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
+            document.getElementById("submitButton").disabled = checkedCount < 2;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="checkbox" onclick="enableButton()"> Item 1<br>
+        <input type="checkbox" onclick="enableButton()"> Item 2<br>
+        <input type="checkbox" onclick="enableButton()"> Item 3<br>
+        <input type="checkbox" onclick="enableButton()"> Item 4<br>
+        <button id="submitButton" disabled>Submit</button>
+    </form>
+</body>
+</html>

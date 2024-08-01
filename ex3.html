@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 3</title>
+    <script>
+        function changeBackgroundColor() {
+            const color = document.getElementById("colorSelect").value;
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <select id="colorSelect" onchange="changeBackgroundColor()">
+        <option value="">Selecione uma cor Prof</option>
+        <option value="red">Vermelho</option>
+        <option value="green">Verde</option>
+        <option value="blue">Azul</option>
+        <option value="yellow">Amarelo</option>
+    </select>
+</body>
+</html>
